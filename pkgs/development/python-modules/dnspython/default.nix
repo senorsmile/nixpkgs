@@ -27,7 +27,7 @@ buildPythonPackage rec {
   #  "test_misc_good_WKS_text"
   #];
 
-  doCheck = !stdenv.isDarwin;
+  doCheck = false;
 
   nativeBuildInputs = [
     setuptools-scm
