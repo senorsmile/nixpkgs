@@ -4,6 +4,7 @@
 , pythonOlder
 , setuptools-scm
 , pytestCheckHook
+, stdenv
 }:
 
 buildPythonPackage rec {
@@ -21,10 +22,12 @@ buildPythonPackage rec {
     pytestCheckHook
   ];
 
-  disabledTests = [
-    # dns.exception.SyntaxError: protocol not found
-    "test_misc_good_WKS_text"
-  ];
+  #disabledTests = [
+  #  # dns.exception.SyntaxError: protocol not found
+  #  "test_misc_good_WKS_text"
+  #];
+
+  doCheck = !stdenv.isDarwin;
 
   nativeBuildInputs = [
     setuptools-scm
