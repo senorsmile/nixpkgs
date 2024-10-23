@@ -43,10 +43,10 @@ buildPythonPackage rec {
     pytestCheckHook
   ];
 
-  disabledTestPaths = [
-    # requires docker
-    "test/functional"
-  ];
+  #disabledTestPaths = [
+  #  # requires docker
+  #  "test/functional"
+  #];
 
   meta = with lib; {
     description = "Python client for the OpenShift API";
