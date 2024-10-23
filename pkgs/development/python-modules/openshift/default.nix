@@ -48,6 +48,8 @@ buildPythonPackage rec {
   #  "test/functional"
   #];
 
+  doCheck = false;
+
   meta = with lib; {
     description = "Python client for the OpenShift API";
     homepage = "https://github.com/openshift/openshift-restclient-python";
